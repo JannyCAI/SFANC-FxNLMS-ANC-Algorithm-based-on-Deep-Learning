@@ -4,7 +4,7 @@ import numpy as np
 from torch import nn
 import scipy.signal as signal
 
-from M6_Res import m6_res
+from M5_Network import m6_res
 
 
 #-------------------------------------------------------------
@@ -100,7 +100,7 @@ class Control_filter_Index_predictor():
 def Control_filter_selection(fs=16000, Primary_noise=None):
     
     # pretrained CNN model path
-    MODEL_PTH = 'AQ_models/M6_res.pth'
+    MODEL_PTH = 'Trained models/model.pth'
     device = torch.device('cuda')
     
     # Construct control_filter_ID_pridector based on the pretrained cnn model
